@@ -3,7 +3,6 @@ whitenoise==5.2.0
 psycopg2==2.8.6
 pytz==2021.1
 dj-database-url==0.5.0
-gunicorn==0.14.2
 
 
 django-heroku

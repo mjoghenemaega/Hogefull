@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x@pfj0_u(571h%=w#e7gxu$6)uv&^vkex#9sl#zo08n=il2dfl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '172.20.10.3','127.0.0.1','0.0.0.0']
+ALLOWED_HOSTS = [ '172.20.10.3','127.0.0.1','0.0.0.0','hogefinance.herokuapp.com']
 
 # Application definition
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,7 +83,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

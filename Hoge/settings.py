@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ '172.20.10.3','127.0.0.1','0.0.0.0']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -128,3 +127,8 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())

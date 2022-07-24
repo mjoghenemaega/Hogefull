@@ -17,26 +17,23 @@
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/Hoge_gold.png' %}">
-	
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+		   
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> 
+
 		<!-- Main style sheet -->
-        <link rel="stylesheet" href="{% static 'css/color-one.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
- 		
-        
-        
-        
-        <!-- CDN -->
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-        <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		
-
-
-
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+		<!-- Color Css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/color-one.css' %}">
+ 
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> 
 
 
 		<!-- Fix Internet Explorer ______________________________________-->
@@ -51,7 +48,7 @@
 			<div id="loader-wrapper">
 				<div id="loader" class="rotate"></div>
 			</div>
-
+			
 			<div class="html-top-content">
 				<!-- ********************** Theme Top Banne & Header ************************ -->
 				<div class="theme-top-section">
@@ -70,7 +67,7 @@
 							    		</button>
 							    		<div class="collapse navbar-collapse" id="navbarResponsive">
 							    		  <ul class="navbar-nav"style="font-weight: bold;">
-											<li class="nav-item"  >
+                          <li class="nav-item"  >
 							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
 							    		  	</li>
 							    		  	<li class="nav-item"  >
@@ -83,7 +80,7 @@
 							    		  	  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
 							    		  	</li>
 							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#apps-review">Merchandise Store</a>
+							    		  	  <a class="nav-link js-scroll-trigger" href="#apps-review"">Merchandise Store</a>
 							    		  	</li>
 							    		  	<li class="nav-item">
 							    		  	  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
@@ -103,26 +100,8 @@
 									
 					
 					</header> <!-- /.theme-main-menu -->
-			
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-					<!-- ^^^^^^^^^^^^^^^^^ Theme Banner ^^^^^^^^^^^^^^^ -->
-					
-				</div> <!-- /.theme-top-section -->
-
-            </div>
+		
                 {% block content %}
 
                 {% endblock %}

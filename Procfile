@@ -1,1 +1,1 @@
-web: gunicorn Hoge.wsgi --log-file -
+web:gunicorn Hoge.wsgi 

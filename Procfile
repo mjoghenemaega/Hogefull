@@ -1,1 +1,1 @@
-web:gunicorn Hoge.wsgi 
+web: gunicorn Hoge.wsgi 

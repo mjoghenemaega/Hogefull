@@ -2962,3 +2962,201 @@ font-size: 1rem;
 .vim{
     background-color:#59BFBE;
 }
+
+
+
+
+
+
+
+/*----------------------------------------*/
+/* Newsletter Popup CSS
+/*----------------------------------------*/
+
+
+/*----------------------------------------*/
+/* Newsletter Popup CSS
+/*----------------------------------------*/
+.popup_wrapper {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  transition: all 0.5s ease 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9999999;
+}
+
+.test {
+background: #000 none repeat scroll 0 0;
+left: 0;
+margin: auto;
+padding: 80px 50px;
+position: absolute;
+right: 0;
+top: 200px;
+width: 55%;
+}
+.subscribe_area > p {
+margin-bottom: 30px;
+color: #ffae00;
+font-size: 1.5rem;
+font-weight: bold;
+}
+.popup_off {
+  color: #ffae00;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #000;
+  width: 53px;
+  height: 25px;
+  line-height: 27px;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 13px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.popup_off:hover {
+  background: #ffae00;
+}
+
+.subscribe-form-group {
+  margin-top: 15px;
+  
+}
+
+.subscribe-form-group input {
+  background: #EBEBEB none repeat scroll 0% 0%;
+  border: medium none;
+  height: 40px;
+  width: 50%;
+  margin: 20px 0;
+  padding: 0 15px;
+  
+}
+
+input#newsletter-permission {
+height: inherit;
+width: 12px;
+}
+
+.mc-form input {
+border-radius: 22px;
+
+}
+.subscribe-bottom input {
+background: #f2f2f2 none repeat scroll 0 0;
+border: medium none;
+box-shadow: none;
+color: #626262;
+font-size: 14px;
+height: 45px;
+padding-left: 25px;
+padding-right: 25px;
+width: 60%;
+
+}
+.clear-2 {
+margin-top: 20px;
+}
+.clear-2 input {
+background: #333 none repeat scroll 0 0;
+border: medium none;
+box-shadow: none;
+color: #fff;
+font-size: 14px;
+height: inherit;
+padding: 13px 35px;
+width: inherit;
+}
+.clear-2 input:hover {
+background: #ee3333 none repeat scroll 0 0;
+border: medium none;
+box-shadow: none;
+}
+
+
+
+.subscribe_area h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .subscribe-bottom input {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }    
+  .test {
+    padding: 20px 30px;
+      top: 50px;
+  }    
+  .subscribe_area h2 {
+    font-size: 25px;
+  }    
+  .subscribe-form-group button {
+    height: 44px;
+    line-height: 40px;
+  } 
+  .test {
+    width: 100%;
+  }    
+
+
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .subscribe-form-group input {
+    width: 100%;
+  }     
+  .test {
+    padding: 20px 30px;
+      top: 120px;
+    width: 80%;
+  }    
+  .subscribe_area h2 {
+    font-size: 25px;
+  }    
+  .subscribe-form-group button {
+    height: 44px;
+    line-height: 40px;
+  }    
+  .subscribe-bottom input {
+    width: 80%;
+  }  
+  .clear-2 input {
+    height: inherit;
+    padding: 13px 35px;
+    width: inherit;
+  }   
+
+
+}

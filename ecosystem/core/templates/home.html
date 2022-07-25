@@ -103,7 +103,35 @@
 			
 
 
+     <!-- Newsletter Popup Start -->
+	 <div class="popup_wrapper hidden-sm hidden-xs">
+		
 
+		<div class="test">
+			<span class="popup_off">Close</span>
+			<div class="subscribe_area text-center">
+				<h2>It's Happening!</h2>
+				<p>GET THE HOGE WEEKLY EMAIL BLAST</p>
+				<div id="mc_embed_signup" class="subscribe-bottom">
+					<form action="" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						
+						{% csrf_token %}
+						<div id="mc_embed_signup_scroll" class="mc-form text-center" style="justify-content: center;" >
+							{{ form.as_p }}
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							
+							<div class="clear-2"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						</div>
+					</form>
+				</div>
+				<div class="subscribe-bottom mt-15">
+					<input type="checkbox" id="newsletter-permission">
+					<label for="newsletter-permission">Don't show this popup again</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Newsletter Popup End -->
 
 
 
@@ -599,30 +627,15 @@
 								<p>Let's Keep You Updated <br>Be Part of the HOGE Community </p>
 							</div>
 
-							<form action="#" class="form-validation" autocomplete="off">
+							<form action="" method="POST" class="form-validation" autocomplete="off">
+								{% csrf_token %}
 								<div class="row">
-									<div class="col-md-6">
-										<label>First Name*</label>
-										<input type="text" placeholder="First Name" name="firstName">
+									<div class="col-md-6 text-center>
+										{{ mymessage.as_p }}
 									</div>
-									<div class="col-md-6">
-										<label>Last Name*</label>
-										<input type="text" placeholder="Last Name" name="lastName">
-									</div>
-									<div class="col-md-6">
-										<label>Email*</label>
-										<input type="email" placeholder="Email Address" name="email">
-									</div>
-									<div class="col-md-6">
-										<label>Phone</label>
-										<input type="text" placeholder="Phone Number" name="phone">
-									</div>
-									<div class="col-12">
-										<label>I would like to discuss*</label>
-										<input type="text" name="message">
-									</div>
+									
 								</div>
-								<button>Send Message</button>
+								<button type="submit">Send Message</button>
 							</form>
 
 							<!--Contact Form Validation Markup -->
@@ -804,7 +817,20 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 </script>
-
+<script>    
+    /*--------------------------
+    2. Newsletter Popup
+    ---------------------------*/
+    setTimeout(function () {
+        $('.popup_wrapper').css({
+            "opacity": "1",
+            "visibility": "visible"
+        });
+        $('.popup_off').on('click', function () {
+            $(".popup_wrapper").fadeOut(500);
+        })
+    }, 10000);
+    </script>
 
 		</div> <!-- /.main-page-wrapper -->
 	</body>

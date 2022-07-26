@@ -111,396 +111,237 @@
 ==============================================
 NEW HERO
 ===================================== */
-.canvas {
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-}
 
 
-.canvas .sky {
-  height: 300%;
-  width: 300%;
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  margin-top: 50%;
-  background-color: deepblue;
-  background: -webkit-radial-gradient(center, rgba(0, 10, 70, 1) 0%, #000 60%);
-  -webkit-animation: rotate 250s infinite linear;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-}
-.star-blink {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background-color: #b6cbd4;
-  border-radius: 50%;
-  z-index: 0;
-  -webkit-transform: rotate(0deg) scale(0.08);
-  -webkit-backface-visibility: hidden;
-  -webkit-animation: blinkAfter 15s infinite ease-out;
-}
-.star-blink div {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg) scale(0.75);
-  box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 2px 9px rgba(255, 255, 255, 0.07), 0 0 2px 15px rgba(0, 0, 0, 0.4), 0 0 2px 16px rgba(255, 255, 255, 0.1);
-  -webkit-backface-visibility: hidden;
-}
-.star-blink:after, .star-blink:before, .star-blink div:after, .star-blink div:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: -350%;
-  left: 45%;
-  height: 800%;
-  width: 10%;
-  border-radius: 50%;
-  background-color: #b6cbd4;
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.1) 100%);
-  z-index: 1;
-  box-shadow: 0 0 25px white;
-  -webkit-backface-visibility: hidden;
-}
-.star-blink:before, .star-blink div:before {
-  -webkit-transform: rotate(90deg);
-}
-.star-blink.blue:after, .star-blink.blue:before, .star-blink.blue div:after, .star-blink.blue div:before {
-  box-shadow: 0 0 25px rgba(0, 0, 255, 1);
-}
-.star-blink.red:after, .star-blink.red:before, .star-blink.red div:after, .star-blink.red div:before {
-  box-shadow: 0 0 25px rgba(255, 0, 0, 1);
-}
-@-webkit-keyframes blinkAfter {
-  0% {
-    -webkit-transform: rotate(0deg) scale(0.08);
- }
-  4% {
-    -webkit-transform: rotate(-20deg) scale(0.9);
- }
-  8% {
-    -webkit-transform: rotate(-40deg) scale(0.08);
- }
-  50% {
-    -webkit-transform: rotate(-40deg) scale(0.08);
- }
-  52% {
-    -webkit-transform: rotate(-50deg) scale(0.3);
- }
-  54% {
-    -webkit-transform: rotate(-60deg) scale(0.08);
- }
-  100% {
-    -webkit-transform: rotate(0deg) scale(0.08);
- }
-}
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
- }
-  100% {
-    -webkit-transform: rotate(360deg);
- }
-}
-
-.sun
+			
+.socials
 {
-
- padding:30px;
- width: 190px;
- height: 190px;
- border-radius: 190px;
- box-shadow: -1px 1px 82px 5px rgba(250,200,12,0.81);
- margin-left: 50%;
- margin-top: 20%;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
- border-radius: 50%;
-
- background: url(https://maproom-wpengine.netdna-ssl.com/wp-content/uploads/Maproom-World-Map-2.png), url(../images/hogelog0.png);
- background-blend-mode: hard-light;
- display: block;
- cursor: grab;
- 
- animation: earthRotate 40s infinite linear;
- 
+  
+  display: flex;
+  flex-direction: row;
 }
-
-.sun:after {
-  content: '';
-  display: block;
-  transform: rotateZ(-20deg) rotateX(40deg);
-  position: absolute;
-  border-radius: 50%;
-  border-bottom: 19px solid rgba(255, 255, 255, 0.7);
-  border-left: 15px solid rgba(255, 255, 255, 0.6);
-  border-right: 15px solid rgba(255, 255, 255, 0.55);
-  transition: all 0.3s;
-  width: 400px;
-  height: 50px;
-  top: 0;
-  bottom: 0;
-  left: -35px;
-  right: -12px;
-  margin: auto;
-  z-index: 2;
-  animation: jump 10s infinite linear;
-}
-.sun:before {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  border: 15px solid rgba(255, 255, 255, 0.6);
-  transition: all 0.3s;
-  transform: rotateZ(-20deg) rotateX(40deg);
-  width: 300px;
-  height: 37px;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  right: -4px;
-  margin: auto;
-  animation: jump 7s infinite linear;
-}
-
-
-
-.mercury
+.socials img
 {
-  animation: mover 1s infinite  alternate;
- background: url(../images/hoge-gaming.jpg) no-repeat;
- padding:0px;
- background-size: cover;
- width: 80px;
- display: block;
-
- height: 80px;
-
- margin-left: 35%;
- margin-top: 260px;
- cursor: pointer;
- position: absolute;
- border-right-width: 5px;
- border-right-color: #484848;
- border-right-style: solid;
- top:0; bottom:0; left:0; right:0;
- border-radius: 200px;
- 
+  height: 4rem;
+  width: 4rem;
 }
-.mercury:hover{
-  width: 120px;
-  height: 120px;
-}
-
-.venus
+.socials img:hover
 {
-animation: mover2 1.6s infinite  alternate;
- background: url(../images/hoge-unifaucet.jpg) no-repeat;
- padding:0px;
- border-right-width: 5px;
- border-right-color: #484848;
- border-right-style: solid;
- background-size: cover;
- width: 80px;
- height: 80px;
- border-radius: 200px;
- margin-left: 40%;
- margin-top: 430px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
-}
-
-.earth-moon-wrap {
- position: relative;
-}
-.sun-moon-wrap {
-  position: relative;
- }
-.earthearth {
- width: 100px;
- height: 100px;
- border-radius: 50%;
- overflow: hidden;
-background: url(../images/hoge-dao3.jpg);
- margin-top: -200px;
- margin-left: -100px;
- 
- animation: earthRotate 3s infinite linear;
-}
-
-.moon {
- position: absolute;
- height: 30px;
- width: 30px;
- left: -120px;
- top: -200px;
- transform: translateY(-30%);
- animation: moonRotate 5s infinite linear;
-}
-.give-height{
- height: 40px;
- width: 40px;
-}
-.give-flex {
- display: flex;
- height: 87%;
- justify-content: center;
- align-items: center;
+  width: 110px;
+  height: 110px;
 }
 
 
-.mars{
-  animation: mover 1.5s infinite  alternate;
- background: url(../images/hoge-university-small.jpg) no-repeat; 
- padding:0px;
- background-size: contain;
- border-right-width: 6px;
- border-right-color: #484848;
- border-right-style: solid;
- width: 90px;
- height: 90px;
- border-radius: 200px;
- margin-left: 50%;
- margin-top: 500px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
+@media (min-width: 1024px) {
+  
+  .email-icon{
+      position: absolute;
+      width: 100px;
+      margin: 0px;
+  }
+    
+    
+  
+    .social-icons img{
+    
+      width: 160px;
+      height: 159px;
+
+    }
+    
+    
+}
+@media (max-width: 1024px) {
+  
+  .email-icon{
+      position: absolute;
+      width: 100px;
+      margin: 0px;
+  }
+    
+    
+  
+    .social-icons img{
+    
+      width: 160px;
+      height: 159px;
+
+    }
+    
+    
 }
 
-.jupiter{
-  animation: mover 1s infinite  alternate;
- background: url(../images/hoge-association.jpg) no-repeat; 
- padding:0px;
- background-size: contain;
- border-right-width: 10px;
- border-right-color: #484848;
- border-right-style: solid;
- width: 100px;
- height: 100px;
- border-radius: 200px;
- margin-left: 60%;
- margin-top: 531px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
+@media (max-width: 769px) {
+  .email-icon{
+      position: absolute;
+      width: 90px;
+      margin: 0px;
+  }
+    
+  .social-icons img{
+      position: absolute;
+      width: 150px;
+      height: 149px;
+
+    }
+    .socials img
+{
+  height: 3rem;
+  width: 3rem;
+}
+  
+   
 }
 
-.association{
-  animation: mover2 1s infinite  alternate;
- background: url(../images/hoge-dao2.jpg) no-repeat; 
- padding:0px;
- background-size: contain;
- border-right-width: 10px;
- border-right-color: #484848;
- border-right-style: solid;
- width: 90px;
- height: 90px;
- border-radius: 200px;
- margin-left: 47%;
- margin-top: 109px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
+@media (max-width: 480px) {
+  
+  .email-icon{
+      position: absolute;
+      width: 90px;
+      margin: 0px;
+  }
+    
+    
+  
+    .social-icons img{
+      position: absolute;
+      width: 150px;
+      height: 149px;
+
+    }
+
+    .home__img{
+  
+    margin-top: 7.5rem;
 }
 
-.saturn{
-  animation: mover 1s infinite  alternate;
-  background: url(../images/swap-fox.jpg) no-repeat;
-  padding:0px;
-  background-size: cover;
-  width: 100px;
- 
-  height: 100px;
-
-  border-right-width: 5px;
-  border-right-color: #484848;
-  border-right-style: solid;
-  top:0; bottom:0; left:0; right:0;
-  border-radius: 200px;
- margin-left: 78%;
-
- margin-top: 320px;
- position: absolute;
-
-
+    
+    
 }
 
-.uranus{
-  animation: mover2 1.5s infinite  alternate;
- background: url(../images/hoge-nft-market.jpg) no-repeat;
- background-size: cover;
- padding:0px;
- border-right-width: 10px;
- border-right-color: black;
- border-right-style: solid;
- width: 100px;
- height: 100px;
- border-radius: 200px;
- margin-left: 73%;
- margin-top: 460px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
-}
+  
+      .wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+      }
+      .wave:before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/wave.svg) repeat-x;
+        background-size: cover;
+        background-position: -1000px 0;
+        opacity: .2;
+        animation: waveOne 60s linear infinite; 
+      }
+      @keyframes waveOne {
+        50%{
+          background-position: 0 0;
+        }
+      }
+      .wave:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/wave.svg) repeat-x;
+        background-size: cover;
+        background-position: 2732px 0;
+        opacity: .3;
+        animation: waveOne 120s linear infinite; 
+      }
+      .email-icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .email-icon:hover{
+      width: 100px;
+    }
+    .social-icons{
+    height: 100%;
+      animation: rotation 60s linear infinite;
+    }
+    @keyframes rotation {
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    .social-icons img:hover{
+   width: 130px;
+height: 129px;        }
+    .img{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(360px, #ffae00, transparent 50%);
+      margin-top: -50px;
+    }
 
-.neptune{
-  animation: mover2 1.5s infinite  alternate;
-  background: url(../images/hoge-vault2.jpg) no-repeat;
-  background-size: cover;
- padding:0px;
- width: 80px;
- height: 80px;
- border-radius: 200px;
- margin-left: 72%;
- margin-top: 190px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
-}
-.earth1{
-  animation: mover 1.5s infinite  alternate;
-  background: url(../images/hoge-dao3.jpg) no-repeat;
-  background-size: cover;
- padding:0px;
- width: 80px;
- height: 80px;
- border-radius: 200px;
- margin-left: 63%;
- margin-top: 119px;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
-}
-.diversion{
-  margin-top: 5rem;
-}
-.explore{
- 
-padding: 2%;
- background-size: cover;
- padding:50px;
- width: 100%;
- height: 80px;
- border-radius: 200px;
- 
- margin-top: 22%;
- position: absolute;
- top:0; bottom:0; left:0; right:0;
- z-index: 3;
-}
+    .social-icons img{
+      position: absolute;
+    }
+    .social-icons img:nth-child(1){
+      top: -10%;
+      left: 42%;
+      
+      
+    }
+    .social-icons img:nth-child(2){
+      top: 25%;
+      right: -10%;
+       
+      
+    }
+    .social-icons img:nth-child(3){
+      top: 70%;
+      left: 50%;
+      
+       
+    }
+    .social-icons img:nth-child(4){
+      top: 25%;
+      left: -10%;
+       
+      
+      
+    }
+    .social-icons img:nth-child(5){
+      top: 70%;
+      left: 10%;
+      
+    }
+  
+    .social-icons img:nth-child(6){
+      top: 70%;
+      left: 10%;
+       
 
-@keyframes mover {
-   0% { transform: translateY(0); }
-   100% { transform: translateY(-10px); }
-}
-@keyframes mover2 {
-  0% { transform: translateY(0); }
-  50% { transform: translateX(-10px); }
-  100% { transform: translateY(-10px); }
-}
+      
+    }
+    .social-icons img:nth-child(6){
+      top: -10%;
+      left: 11%;
+       
+
+      
+    }
+    
+
+
+
+
+
+
 
 
 /*tooltips*/
@@ -868,6 +709,10 @@ width: 8rem; height: 2.5rem;}
 {
   height: 3rem;
   width: 3rem;
+}
+    .home__img{
+  
+    margin-top: 7.5rem;
 }
 
 }
@@ -3079,7 +2924,7 @@ padding: 13px 35px;
 width: inherit;
 }
 .clear-2 input:hover {
-background: #ee3333 none repeat scroll 0 0;
+background: #ffae00 none repeat scroll 0 0;
 border: medium none;
 box-shadow: none;
 }

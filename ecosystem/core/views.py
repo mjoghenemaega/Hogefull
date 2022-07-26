@@ -33,6 +33,7 @@ def home(request):
         template,
         settings.EMAIL_HOST_USER,
         [email],
+        message.attach_file('https://hogefinance.herokuapp.com/static/images/h2.jpg')
         
             
         )

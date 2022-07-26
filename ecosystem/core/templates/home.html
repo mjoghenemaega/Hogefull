@@ -23,6 +23,8 @@
 
 		<!-- Main style sheet -->
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 		<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -100,6 +102,64 @@
 									
 					
 					</header> <!-- /.theme-main-menu -->
+					
+					<main class="l-main">
+						<!--===== HOME =====-->
+						<section class="home" id="home">
+							<div class="home__container bd-grid">
+								<div class="home__img ">
+							
+									<div class=" img">
+										<div class="social-icons">
+											<img class="earth" src="{% static 'images/round1-removebg-preview.png' %}" alt="">
+											<img class="earth" src="{% static 'images/round2-removebg-preview.png' %}" alt="">
+											<img class="earth" src="{% static 'images/round3-removebg-preview.png' %}" alt="">
+											<img class="earth" src="{% static 'images/round4-removebg-preview.png' %}" alt="">
+											<img class="moon" src="{% static 'images/round5-removebg-preview.png' %}"  alt="">
+											<img class="earth" src="{% static 'images/round4-removebg-preview.png' %}" alt="">
+										 
+										</div>
+										<img class="email-icon" src="{% static 'images/hogelog0.png' %}" alt="">
+									</div>
+								</div>
+			
+								<div class="home__data">
+									<div class="exe"><h1>Explore The<br> <span style="color: #ffae00;">HOGE </span>DEFI <br>Ecosystem.</h1>
+										<p>We like to have fun but we also MEME business. Join us!</p>
+										<p><span style="color: #ffae00;">Click  on the planets to view them!</span></p>
+										
+										
+										<div class="socials">
+			
+											<a href="https://www.instagram.com/officialhoge"><img src="{% static 'images/logo_insta-removebg-preview.png' %}"></a>
+											
+											<a href="https://discord.com/invite/hoge"><img src="{% static 'images/logodiscord-removebg-preview.png' %}"></a>
+											<a href="https://reddit.com/r/hoge"><img src="{% static 'images/logoreddit-removebg-preview.png' %}"></a>
+											<a href="https://t.me/hogefinance"><img src="{% static 'images/logotelegram-removebg-preview.png' %}"></a>
+											<a href="https://www.tiktok.com/@hoge.finance"><img src="{% static 'images/logotiktok-removebg-preview.png' %}"></a>
+											<a href="https://twitter.com/hogefinance"><img src="{% static 'images/logotwitter-removebg-preview.png' %}"></a>
+											
+										</div>
+										
+									
+									</div>
+								</div>
+			
+								
+							</div>
+							
+						   
+						</section>
+						<div class="wave">
+							<img src="{% static 'images/wave.svg' %}" alt="">
+						</div>
+					</main>
+			
+					<!--===== GSAP =====-->
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+			
+					
+				
 			
 
 
@@ -116,7 +176,7 @@
 					<form action="" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						
 						{% csrf_token %}
-						<div id="mc_embed_signup_scroll" class="mc-form text-center" style="justify-content: center;" >
+						<div id="mc_embed_signup_scroll" class="mc-form text-center">
 							{{ form.as_p }}
 							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 							
@@ -425,8 +485,10 @@
 								
 
 
-								<div class="text-center container">
-									<button id="b39" class="learn-more  ">BUY HOGE <i class="flaticon-right-thin"></i></button>
+								<div class="text-center container" style="justify-self: center; margin: auto;">
+									<button id="b39" class="learn-more  " >BUY HOGE <i class="flaticon-right-thin"></i></button>
+									<p class="text-center"><a href="#" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>uniswap</a></p>
+									<p class="text-center"><a href="#" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Pancakeswap</a></p>
 								
 	
 							
@@ -598,7 +660,7 @@
               </div> 
             </div> <!-- /.stock-market-price -->
           </div>
-					<button id="b39" class="learn-more  ">View More Media <i class="flaticon-right-thin"></i></button>
+				<a href="{% url 'media' %}" class="text-center" ><button id="b39" class="learn-more  text-center">View More Media <i class="flaticon-right-thin"></i></button></a>
 								
 
 				</div>
@@ -829,7 +891,14 @@ function myFunction() {
         $('.popup_off').on('click', function () {
             $(".popup_wrapper").fadeOut(500);
         })
-    }, 10000);
+    }, 15000);
+	
+// HOME
+gsap.from('.home__title', {opacity: 0, duration: 1, delay:1.6, y: 30})
+gsap.from('.home__description', {opacity: 0, duration: 1, delay:1.8, y: 30})
+gsap.from('.home__button', {opacity: 0, duration: 1, delay:2.1, y: 30})
+gsap.from('.home__img', {opacity: 0, duration: 1, delay:1.3, y: 30})
+
     </script>
 
 		</div> <!-- /.main-page-wrapper -->

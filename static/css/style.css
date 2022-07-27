@@ -1635,9 +1635,9 @@ background-image: url(images/l);}
   top:13%;
 }
 /*----------------- Partner Slider -----------*/
-.partner-section {padding: 100px 0 30px;}
+.partner-section {padding: 100px 0 30px; margin-top: 10px;}
 .partner-slider .item a {display: block;}
-.partner-slider .item img {margin: 0 auto;}
+.partner-slider .item img {margin: 0 auto; margin-top: 15px;}
 /*------------------- Footer -----------------*/
 .theme-footer {position: relative;z-index: 1;}
 .theme-footer .shape {

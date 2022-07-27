@@ -13,8 +13,8 @@ def home(request):
     form =JoinForm(request.POST or None)
     mymessage =MessageForm(request.POST or None)
     success_url ='/'
-    firstname= request.POST.get ('firstName')
-    lastname= request.POST.get('lastName')
+    firstname= request.POST.get ('firstname')
+    lastname= request.POST.get('lastname')
     myemail= request.POST.get('myemail')
     phone= request.POST.get('phone')
     message=request.POST.get('message')

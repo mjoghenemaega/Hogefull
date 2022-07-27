@@ -31,9 +31,8 @@ def home(request):
         newsletter = EmailMessage(
         'Thank you Suscribing to our Newsletter',
         template,
-        settings.EMAIL_HOST_USER,
+        'HOGE FINANCE',
         [email],
-        message.attach_file('https://hogefinance.herokuapp.com/static/images/h2.jpg')
         
             
         )
@@ -56,7 +55,7 @@ def home(request):
         register= EmailMessage(
             'Thanks for signing up',
             template,
-            settings.EMAIL_HOST_USER,
+            'HOGE FINANCE',
             [myemail],
             
             

@@ -2807,7 +2807,9 @@ font-size: 1rem;
 .vim{
     background-color:#59BFBE;
 }
-
+.open{
+  background-color: rgb(143, 240, 143);
+}
 
 
 
@@ -3005,3 +3007,66 @@ box-shadow: none;
 
 
 }
+
+
+
+
+							.mydropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.mydropdown .dropbtn {
+  
+  border: none;
+  outline: none;
+ 
+  padding: 14px 16px;
+  background-color: inherit;
+ 
+  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: 'brandon_grotesque_regularRg';
+ 
+  padding: 7px 0 0;
+  
+  font-size: 20px;
+  margin: 0 22px;
+  color: #fff;
+  -o-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+
+/* Dropdown content (hidden by default) */
+.mydropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffae00;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.mydropdown-content a {
+  float: none;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.mydropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.mydropdown:hover .mydropdown-content {
+  display: block;
+}
+					

@@ -87,6 +87,35 @@
                 },
           })
         }
+       // ------------------------ Market Rate Slider
+       var mSlider = $ ("#market-rate2");
+       if(mSlider.length) {
+           mSlider.owlCarousel({
+             loop:true,
+             nav:false,
+             dots:false,
+             margin:30,
+             autoplay:true,
+             autoplayTimeout:1000,
+             smartSpeed:1200,
+             autoplayHoverPause:true,
+             lazyLoad:true,
+             responsive:{
+                   0:{
+                       items:1
+                   },
+                   500:{
+                       items:2
+                   },
+                   992:{
+                       items:3
+                   },
+                   1300:{
+                       items:4,
+                   }
+               },
+         })
+       }
 
 
 

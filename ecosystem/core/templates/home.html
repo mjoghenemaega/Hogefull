@@ -69,12 +69,24 @@
 							    		</button>
 							    		<div class="collapse navbar-collapse" id="navbarResponsive">
 							    		  <ul class="navbar-nav"style="font-weight: bold;">
-                          <li class="nav-item"  >
+                                            <li class="nav-item"  >
 							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
 							    		  	</li>
-							    		  	<li class="nav-item"  >
-							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About</a>
+							    		  	<li class="nav-item mydropdown"   >
+												
+												<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">About
+												<i class="fa fa-caret-down"></i>
+												</button>
+												<div class="mydropdown-content">
+												<a  class="nav-link" href="{% url 'about' %}">About us</a><hr>
+												<a target="_blank" href="https://www.certik.com/projects/hogefinance">Certik Audit</a>
+												
+												</div>
+												
+													
+							    		  	 
 							    		  	</li>
+											
 							    		  	<li class="nav-item">
 							    		  	  <a class="nav-link js-scroll-trigger" href="#services">Marketplace/NFTs</a>
 							    		  	</li>
@@ -82,7 +94,7 @@
 							    		  	  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
 							    		  	</li>
 							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#apps-review">Merchandise Store</a>
+							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Merchandise Store</a>
 							    		  	</li>
 							    		  	<li class="nav-item">
 							    		  	  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
@@ -97,8 +109,39 @@
 							    </nav> 
 							</div> <!-- /.menu-wrapper -->
 						</div> <!-- /.container -->
+						
 					
 										<div class="progress-bar" id="myBar"></div>
+										
+     <!-- Newsletter Popup Start -->
+	 <div class="popup_wrapper hidden-sm hidden-xs">
+		
+
+		<div class="test">
+			<span class="popup_off">Close</span>
+			<div class="subscribe_area text-center">
+				<h2>It's Happening!</h2>
+				<p>GET THE HOGE WEEKLY EMAIL BLAST</p>
+				<div id="mc_embed_signup" class="subscribe-bottom">
+					<form action="" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						
+						{% csrf_token %}
+						<div id="mc_embed_signup_scroll" class="mc-form text-center ">
+							{{ form.as_p }}
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							
+							<div class="clear-2"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+						</div>
+					</form>
+				</div>
+				<div class="subscribe-bottom mt-15">
+					<input type="checkbox" id="newsletter-permission">
+					<label for="newsletter-permission">Don't show this popup again</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Newsletter Popup End -->
 									
 					
 					</header> <!-- /.theme-main-menu -->
@@ -116,7 +159,7 @@
 											<img class="earth" src="{% static 'images/round3-removebg-preview.png' %}" alt="">
 											<img class="earth" src="{% static 'images/round4-removebg-preview.png' %}" alt="">
 											<img class="earth"  src="{% static 'images/round5-removebg-preview.png' %}"  alt="">
-											<img class="earth" src="{% static 'images/round4-removebg-preview.png' %}" alt=""></a>
+											<img class="earth" src="{% static 'images/round-removebg-preview.png' %}" alt=""></a>
 										 
 										</div>
 										<a href="{% url 'home' %}"><img class="email-icon" src="{% static 'images/hogelog0.png' %}" alt=""></a>
@@ -163,35 +206,6 @@
 			
 
 
-     <!-- Newsletter Popup Start -->
-	 <div class="popup_wrapper hidden-sm hidden-xs">
-		
-
-		<div class="test">
-			<span class="popup_off">Close</span>
-			<div class="subscribe_area text-center">
-				<h2>It's Happening!</h2>
-				<p>GET THE HOGE WEEKLY EMAIL BLAST</p>
-				<div id="mc_embed_signup" class="subscribe-bottom">
-					<form action="" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						
-						{% csrf_token %}
-						<div id="mc_embed_signup_scroll" class="mc-form text-center">
-							{{ form.as_p }}
-							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-							
-							<div class="clear-2"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-						</div>
-					</form>
-				</div>
-				<div class="subscribe-bottom mt-15">
-					<input type="checkbox" id="newsletter-permission">
-					<label for="newsletter-permission">Don't show this popup again</label>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Newsletter Popup End -->
 
 
 
@@ -232,17 +246,17 @@
 									<div class="number">01</div>
 									<h2 class="title"><span>HOGE Merch Shop</span> Grab all the latest creative HOGE gear</h2>
 								
-									<a href="#" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
+									<a href="https://hoge.store/" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
 								</div> 
 							</div> 
 							
 							<div class="col-lg-6 img-box"><div ><div  class=" common flip-hide">											
 								<img  src="{% static 'images/1.jpg' %}" alt="">
-								<div class="flip-text"><p> <b>•</b>We’ve sourced some of the most creative minds on the web to bring swag, style and fashion to HOGE and our community. 
+								<a href="https://hoge.store/">	<div style="color: #fff;" class="flip-text"><p> <b>•</b>We’ve sourced some of the most creative minds on the web to bring swag, style and fashion to HOGE and our community. 
 									<br><b>•</b>	Deploying front end wallet integration to connect HOGE NFT platform to our merch shop. Activate utility layers.
 									<br><b>•</b>	HOGE rewards program launches this, Summer.
 									 
-									</p></div>
+									</p></div></a>
 
 							 </div></div></div>
 						</div> 
@@ -254,18 +268,18 @@
 									<h2 class="title"><span>HOGE</span> NFT Marketplace</h2>
 									<h4>Provides true smart contract ownership for you. </h4>
 									
-									<a href="#" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
+									<a href="https://own.studio/" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
 								</div> 
 							</div> 
 							
 							<div class="col-lg-6 order-lg-first "><div ><div  class=" common flip-hide">											
 								<img  src="{% static 'images/2.jpg' %}" alt="">
-								<div class="flip-text"><p><b>•</b>	Own NFT Studio was born from community members at HOGE. In true web3 fashion, it began with ideas, a 0% seed loan, and handshakes. The only expectation was to build our vision, empowering creators to OWN the future. 
+								<a href="https://own.studio/">	<div style="color: #fff;" class="flip-text"><p><b>•</b>	Own NFT Studio was born from community members at HOGE. In true web3 fashion, it began with ideas, a 0% seed loan, and handshakes. The only expectation was to build our vision, empowering creators to OWN the future. 
 									<br><b>•</b>	HOGE is focused on bridging the gap between legacy gaming and blockchain based gaming to usher in the evolved play and earn gaming web3 industry. 
 									<br><b>•</b>	We provide users with a no fuss Smart Contract template. Dictate the royalty wallet, percentage, and mint Smart Contracts from your wallet.
 									<br><b>•</b>	Eth contract on standby
 									
-									</p></div>
+									</p></div></a>
 
 							 </div></div></div>
 						
@@ -281,19 +295,19 @@
 									<div class="number">03</div>
 									<h2 class="title"><span>HOGE</span> Aerospace Institute</h2>
 									
-									<a href="#" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
+									<a href="https://hoge-aerospace.com/" class="learn-more">Learn More <i class="flaticon-right-thin"></i></a>
 								</div> 
 							</div> 
 							<div class="col-lg-6 img-box"><div ><div  class=" common flip-hide">											
 								<img  src="{% static 'images/Untitled design (1).jpg' %}" height="452px" width="400px" alt="">
-								<div class="flip-text"><p>The Hoge Aerospace Institute:
+								<a href="https://hoge-aerospace.com/"><div style="color: #fff;" class="flip-text"><p>The Hoge Aerospace Institute:
 									<br><b>•</b>Develops Blockchain solutions for space technology mission
 									<br><b>•</b>control and resource optimization.
 									<br><b>•</b>Works with higher educational institutions to empower
 									communities and economies.
 									<br><b>•</b>Innovates decentralized approached to space data
 									stewardship and dissemination
-									</p></div>
+									</p></div></a>
 
 							 </div></div></div></div> 
 					</div> 
@@ -312,41 +326,41 @@
 								</div>
 					
 								<p class="sub-text">More Hoge Products</p>
-								<span class="text text-center"><p><b>•</b>  HOGE University</p></span>
-								<span class="text text-center"><p><b>•</b>  HOGE Gaming</p></span>
-								<span class="text text-center"> <p><b>•</b>  Land of HOGE in NFT Worlds</p></span>
-								<span class="text text-center"><p><b>•</b>  HOGE Clothing</p></span>
+								<span class="text text-center"><p><b>•</b><a href="https://www.hogeuniversity.org/">  HOGE University</a></p></span>
+								<span class="text text-center"><p><b>•</b><a href="https://www.twitch.tv/hoge_gaming?sr">  HOGE Gaming</a></p></span>
+								<span class="text text-center"> <p><b>•</b>  <a href="https://own.studio/"> Land of HOGE in NFT Worlds</a></p></span>
+								<span class="text text-center"><p><b>•</b><a href="https://hoge.store/">  HOGE Clothing</a></p></span>
 								<span class="text text-center"><p><b>•</b><a href="https://www.hogemint.com/" >  HOGE Mint</a></p></span>
-							<span class="text "><p><b>•</b><a href="https://www.hogemint.com/" > HOGE UniFaucet</a></p></span>
+							    <span class="text "><p><b>•</b><a href="https://www.hogemint.com/" > HOGE UniFaucet</a></p></span>
 								<span class="text text-center"><p><b>•</b><a href="https://www.hogemint.com/" >  HOGE Vaultsale</a></p></span><br>
 								<br>
 
 
-								<p class="text-center"><a href="#" class="learn-more ">See More...</a></p>
+								<p class="text-center"><a href="{% url 'store' %}" class="learn-more ">All Products</a></p>
 								
 							</div>
 							<div class="col-lg-6 order-lg-first">
 								<div class="icon-data">
 									<div class="single-box" data-aos="fade-right" data-aos-duration="1100">
-										<img src="{% static 'images/h3.jpg' %}"  alt="">
+										<a href="https://opensea.io/collection/hoge-music"> <img src="{% static 'images/h3.jpg' %}"  alt="">
 										<h3>HOGE Music</h3>
-										<p>A community driven project thrives on audible creativi...<span style="color: #ffae00;">Read more</span></p>
-									</div> <!-- /.single-box -->
+										<p style="color: #fff;">A community driven project thrives on audible creativi...<span style="color: #ffae00;">Read more</span></p>
+									</a></div> <!-- /.single-box -->
 									<div class="single-box" data-aos="fade-down" data-aos-duration="1100">
-										<img src="{% static 'images/h1.jpg' %}" alt="">
+									<a href="https://hogeswapbsc.com/">	<img src="{% static 'images/h1.jpg' %}" alt="">
 										<h3>HOGE Swap</h3>
-										<p>HOGE liquidity pools and a decentralized swap to generate reve...<span style="color: #ffae00;">Read more</span>.</p>
-									</div> <!-- /.single-box -->
+										<p  style="color: #fff;">HOGE liquidity pools and a decentralized swap to generate reve...<span style="color: #ffae00;">Read more</span>.</p>
+									</a></div> <!-- /.single-box -->
 									<div class="single-box" data-aos="fade-up" data-aos-duration="1100">
-										<img src="{% static 'images/h4.jpg' %}"alt="">
+										<a href="https://egs.hogeassociation.org/community/"><img src="{% static 'images/h4.jpg' %}"alt="">
 										<h3>Hoge Dao</h3>
-										<p>The HOGE decentralized autonomous organization that will serve as the blueprint for the ...<span style="color: #ffae00;">Read more</span> </p>
-									</div> <!-- /.single-box -->
+										<p  style="color: #fff;">The HOGE decentralized autonomous organization that will serve as the blueprint for the ...<span style="color: #ffae00;">Read more</span> </p>
+									</a></div> <!-- /.single-box -->
 									<div class="single-box" data-aos="fade-up" data-aos-duration="1100">
-										<img src="{% static 'images/h2.jpg' %}"  alt="">
-										<h3>Hoge Games</h3>
-										<p>The official HOGE gaming project that brings live streamed gaming events to create a fun...<span style="color: #ffae00;">Read more</span></p>
-									</div> <!-- /.single-box -->
+										<a href="https://www.twitch.tv/hoge_gaming?sr"><img src="{% static 'images/h2.jpg' %}"  alt="">
+										<h3>Hoge Gaming</h3>
+										<p  style="color: #fff;">The official HOGE gaming project that brings live streamed gaming events to create a fun...<span style="color: #ffae00;">Read more</span></p>
+									</a></div> <!-- /.single-box -->
 								</div> <!-- /.icon-data -->
 							</div>
 						</div>
@@ -470,9 +484,10 @@
 				<div class="our-work-progress bg-color" id="progress">
 					<div class="sticky-social">
 						<ul class="social">
-							  <li class="twitter"><a href="#"><img style="margin: auto;" src="{% static 'images/uniswap.png' %}" height="45px" width= "45px"></a></li>
-							<li class="insta"><a href="#"><img style="margin: auto;" src="{% static 'images/pancakesawp.png' %}" height="45px" width= "45px"></a></li>
-							<li class="pin"><a href="#"><img style="margin: auto;" src="{% static 'images/dextoolslogo.png' %}" height="45px" width= "45px"></a></li>
+							  <li class="twitter"><a href="https://app.uniswap.org/#/swap?slippage=500&outputCurrency=0xfad45e47083e4607302aa43c65fb3106f1cd7607&use=V2"><img style="margin: auto;" src="{% static 'images/uniswap.png' %}" height="45px" width= "45px"></a></li>
+							<li class="insta"><a href="https://pancakeswap.finance/swap?outputCurrency=0xa4fffc757e8c4f24e7b209c033c123d20983ad40"><img style="margin: auto;" src="{% static 'images/pancakesawp.png' %}" height="45px" width= "45px"></a></li>
+							<li class="pin"><a href="https://www.dextools.io/app/uniswap/pair-explorer/0x7fd1de95fc975fbbd8be260525758549ec477960"><img style="margin: auto;" src="{% static 'images/dextoolslogo.png' %}" height="45px" width= "45px"></a></li>
+							<li class="open"><a href="https://opensea.io/HogeFinance"><img style="margin: auto;" src="{% static 'images/opensea-r.png' %}" height="45px" width= "45px"></a></li>
 							
 						  </ul>
 						</div>
@@ -487,8 +502,8 @@
 
 								<div class="text-center container" style="justify-self: center; margin: auto;">
 									<button id="b39" class="learn-more  " >BUY HOGE <i class="flaticon-right-thin"></i></button>
-									<p class="text-center"><a href="#" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>uniswap</a></p>
-									<p class="text-center"><a href="#" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Pancakeswap</a></p>
+									<p class="text-center"><a href="https://www.youtube.com/watch?v=DROY0E3so_Q" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Multichain</a></p>
+									<p class="text-center"><a href="https://www.youtube.com/watch?v=FJzBdpvo5cg" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Pancakeswap</a></p>
 								
 	
 							
@@ -552,9 +567,9 @@
   
   html: '<p  style=" font-weight:bold; color: #ffae00; font-size:15px; padding: 0px; margin: auto;" >NOTE: BSC HOGE is wrapped, you will not receive reflections.  However that means there is no 2% transaction tax on PancakeSwap!, However you can use the multichain bridge to bring it over to Ethereum to receive reflections!</p>'+
         '<img style="margin: auto;" class="rotate"  src="{% static "images/pancakesawp.png" %}" height="50px" width= "50px">'+
-		'<a href="#" style="border-radius: 5px; font-weight:bold;margin:5px; padding: 5px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">PancakeSwap</a>'+'<img style="margin: auto;" src="{% static "images/anyswap.png" %}" height="50px" width= "50px">'+
-		'<a  href="#" style="border-radius: 5px; font-weight:bold; margin:5px;padding: 2px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">AnySwap</a>'+'<img style="margin: auto;" src="{% static "images/uniswap.png" %}" height="50px" width= "50px" >'+
-		'<a  href="#" style="border-radius: 5px; font-weight:bold; margin:5px;padding: 2px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">UniSwap</a>',
+		'<a href="https://pancakeswap.finance/swap?outputCurrency=0xa4fffc757e8c4f24e7b209c033c123d20983ad40" style="border-radius: 5px; font-weight:bold;margin:5px; padding: 5px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">PancakeSwap</a>'+'<img style="margin: auto;" src="{% static "images/dextoolslogo.png" %}" height="50px" width= "50px">'+
+		'<a  href="https://www.dextools.io/app/ether/pair-explorer/0x7fd1de95fc975fbbd8be260525758549ec477960" style="border-radius: 5px; font-weight:bold; margin:5px;padding: 2px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">Dextools</a>'+'<img style="margin: auto;" src="{% static "images/uniswap.png" %}" height="50px" width= "50px" >'+
+		'<a  href="https://app.uniswap.org/#/swap?slippage=500&outputCurrency=0xfad45e47083e4607302aa43c65fb3106f1cd7607&use=V2" style="border-radius: 5px; font-weight:bold; margin:5px;padding: 2px; color: #000;text-align: center; background:linear-gradient( 45deg, #ffae00, #ffae00 100%);">UniSwap</a>',
   position: 'top-end',
   background: '#000',
   backdrop: `
@@ -646,21 +661,33 @@
                   
                 </div>
                 <div class="item">
-                  										
-                    <a class="lightbox" href="https://www.usatoday.com/story/sponsor-story/hoge-finance/2021/10/27/hoge-aerospace-institute-hai-build-program-aspiring-explorers/6175716001/">
-                      <img src="{% static 'images/Hai.jpg' %}" width="667px" height="370px"></a>
-                   
-                </div>
+                 										
+					<a class="lightbo">
+									  <iframe width="360px" height="227px"allowfullscreen="true"
+				src="https://www.youtube.com/embed/FJzBdpvo5cg">
+				
+				</iframe>	</a>
+				   
+				</div> 
                 <div class="item">
                  										
                     <a class="lightbox" href="https://www.yahoo.com/now/hoge-announces-collaboration-defi-angels-105900972.html">
                       <img src="{% static 'images/hoge joins.jpg' %}">	</a>
                    
-                </div>     
+                </div> 
+				<div class="item">
+					
+                 										
+					<a class="lightbo" >
+			
+				<iframe title="USATODAY-Embed Player" width="360px" height="227px" frameborder="0" scrolling="no" allowfullscreen="true" marginheight="0" marginwidth="0" src="https://uw-media.usatoday.com/embed/video/5814981001?placement=snow-embed"></iframe>	</a>
+				   
+				</div>     
               </div> 
             </div> <!-- /.stock-market-price -->
           </div>
-				<a href="{% url 'media' %}" class="text-center" ><button id="b39" class="learn-more  text-center">View More Media <i class="flaticon-right-thin"></i></button></a>
+		  
+				<a href="{% url 'media' %}" class="text-center d-flex justify-content-center" ><button id="b39" class="learn-more  text-center justify-content-center mx-auto">View More Media <i class="flaticon-right-thin"></i></button></a>
 								
 
 				</div>
@@ -692,12 +719,11 @@
 							<form action="" method="POST" class="form-validation" autocomplete="off">
 								{% csrf_token %}
 								<div class="row">
-									<div class="col-md-6 text-center>
+									<div class="col-md-12">
 										{{ mymessage.as_p }}
-									</div>
-									
+									</div>		
 								</div>
-								<button type="submit">Send Message</button>
+								  <button type="submit">Send Message</button>
 							</form>
 
 							<!--Contact Form Validation Markup -->
@@ -845,40 +871,7 @@
 
 		</script>
 		
-<script>
-	var amount = 800;
-var sky = $('.sky');
 
-for (var i = 0 ; i < amount ; i++ ) {
-	var s = $('<div class="star-blink"><div></div></div>');
-	s.css({
-		'top': Math.random() * 100 + '%',
-		'left': Math.random() * 100 + '%',
-		'animation': 'blinkAfter 15s infinite ' + Math.random() * 100 + 's ease-out',
-		'width': Math.random() * 2 + 7 + 'px',
-		'height': Math.random() * 2 + 7 + 'px',
-		'opacity': Math.random() * 5 / 10 + 0.5
-		});
-	if (i % 8 === 0) {
-		s.addClass('red');
-	} else if (i % 10 === 6) {
-		s.addClass('blue');
-	}
-	sky.append(s);
-}
-
-
-
-
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-</script>
 <script>    
     /*--------------------------
     2. Newsletter Popup
@@ -891,7 +884,7 @@ function myFunction() {
         $('.popup_off').on('click', function () {
             $(".popup_wrapper").fadeOut(500);
         })
-    }, 15000);
+    }, 35000);
 	
 // HOME
 gsap.from('.home__title', {opacity: 0, duration: 1, delay:1.6, y: 30})
@@ -900,6 +893,7 @@ gsap.from('.home__button', {opacity: 0, duration: 1, delay:2.1, y: 30})
 gsap.from('.home__img', {opacity: 0, duration: 1, delay:1.3, y: 30})
 
     </script>
+	
 
 		</div> <!-- /.main-page-wrapper -->
 	</body>

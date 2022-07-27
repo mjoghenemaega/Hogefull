@@ -66,30 +66,42 @@
 							    		  <i class="fa fa-bars" aria-hidden="true"></i>
 							    		</button>
 							    		<div class="collapse navbar-collapse" id="navbarResponsive">
-							    		  <ul class="navbar-nav"style="font-weight: bold;">
-											<li class="nav-item"  >
-							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
-							    		  	</li>
-							    		  	<li class="nav-item"  >
-							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#services">Marketplace/NFTs</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#apps-review">Merchandise Store</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
-							    		  	</li>
-											  <li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-							    		  	</li>
-							    		  </ul>
-							    		</div>
+											<ul class="navbar-nav"style="font-weight: bold;">
+											 <li class="nav-item"  >
+												  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
+												</li>
+												<li class="nav-item mydropdown"   >
+												
+													<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">About
+													<i class="fa fa-caret-down"></i>
+													</button>
+													<div class="mydropdown-content">
+													<a  class="nav-link" href="{% url 'about' %}">About us</a>
+													<hr>
+													<a target="_blank" href="https://www.certik.com/projects/hogefinance">Certik Audit</a>
+													
+													</div>
+													
+														
+												   
+												  </li>
+												<li class="nav-item">
+												  <a class="nav-link js-scroll-trigger" href="#services">Marketplace/NFTs</a>
+												</li>
+												<li class="nav-item">
+												  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
+												</li>
+												<li class="nav-item">
+												  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Merchandise Store</a>
+												</li>
+												<li class="nav-item">
+												  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
+												</li>
+												<li class="nav-item">
+												  <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+												</li>
+											</ul>
+										  </div>
 							    	</div>
 									
 							    </nav> 
@@ -120,6 +132,15 @@
 				</div> <!-- /.theme-top-section -->
 
             </div>
+			<div class="sticky-social">
+				<ul class="social">
+					  <li class="twitter"><a href="https://app.uniswap.org/#/swap?slippage=500&outputCurrency=0xfad45e47083e4607302aa43c65fb3106f1cd7607&use=V2"><img style="margin: auto;" src="{% static 'images/uniswap.png' %}" height="45px" width= "45px"></a></li>
+					<li class="insta"><a href="https://pancakeswap.finance/swap?outputCurrency=0xa4fffc757e8c4f24e7b209c033c123d20983ad40"><img style="margin: auto;" src="{% static 'images/pancakesawp.png' %}" height="45px" width= "45px"></a></li>
+					<li class="pin"><a href="https://www.dextools.io/app/uniswap/pair-explorer/0x7fd1de95fc975fbbd8be260525758549ec477960"><img style="margin: auto;" src="{% static 'images/dextoolslogo.png' %}" height="45px" width= "45px"></a></li>
+					<li class="open"><a href="https://opensea.io/HogeFinance"><img style="margin: auto;" src="{% static 'images/opensea-r.png' %}" height="45px" width= "45px"></a></li>
+					
+				  </ul>
+				</div>
                 {% block content %}
 
                 {% endblock %}

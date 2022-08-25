@@ -18,6 +18,7 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/Hoge_gold.png' %}">
 		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 		   
 		
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> 
@@ -46,7 +47,7 @@
 
 			<!-- ********************** Loading Transition ************************ -->
 			<div id="loader-wrapper">
-				<div id="loader" class="rotate"></div>
+				<div id="loader" ></div>
 			</div>
 
 			<div class="html-top-content">
@@ -86,13 +87,13 @@
 												   
 												  </li>
 												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#services">Marketplace/NFTs</a>
+												  <a class="nav-link js-scroll-trigger" href="#services">NFT's</a>
 												</li>
 												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
+												  <a class="nav-link js-scroll-trigger" href="#progress">Buy</a>
 												</li>
 												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Merchandise Store</a>
+												  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Store</a>
 												</li>
 												<li class="nav-item">
 												  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
@@ -180,7 +181,7 @@
 					Partner Slider
 				=====================================================
 				-->
-				<div class="partner-section">
+				<!-- <div class="partner-section">
 					<div class="theme-title text-center">
 						<h2><span>Price Listings</span></h2>
 					</div>
@@ -193,7 +194,7 @@
 							<div class="item"><a href="https://blockfolio.com/coin/HOGE"><img src="{% static 'images/blockfolio_logo.png' %}" alt=""></a></div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 
 			<footer class="theme-footer">

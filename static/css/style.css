@@ -43,8 +43,7 @@
 @import url('../fonts/custom-font/bg-l/stylesheet.css');
 @import url('../fonts/custom-font/bg-reg/stylesheet.css');
 @import url('../fonts/custom-font/lovelo/stylesheet.css');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
-/*----bootstrap css ----- */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800&display=swap');/*----bootstrap css ----- */
 @import url('../vendor/bootstrap/css/bootstrap.min.css');
 /*----font awesome -------*/
 
@@ -80,15 +79,29 @@
   background: #000;
   overflow: hidden;
 }
-#loader {
-  background: url(../images/hogelog0.png);
-  width: 250px;
-  height: 250px;
-  position: relative;
-  top: 40%;
-  margin: -32px auto 0 auto;
+
  
-}
+
+
+
+  #loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -32px auto 0 auto;
+  }
+
+
+ 
+
 .rotate {
   animation: rotation 8s infinite linear;
 }
@@ -460,11 +473,7 @@ height: 129px;        }
        url('../fonts/font-awesome/fonts/fontawesome-webfont.svg') format('svg'); /* Legacy iOS */
  }
  body {
-  /*   font-family: 'brandon_grotesquebold';
-  font-family: 'brandon_grotesquemedium';
-  font-family: 'brandon_grotesque_regularRg';
-  font-family: 'loveloline_light';    */
-  font-family: 'proxima_novaregular';
+  font-family: 'Poppins';
   font-weight: normal;
   color:#fff;
   background-color: #000;
@@ -474,12 +483,12 @@ height: 129px;        }
 .main-page-wrapper {overflow-x:hidden;}
  h1,h2,h3,h4,h5,h6,p,ul { margin:0;padding: 0;}
  h1,h2,h3,h4,h5,h6 {color:#fff;}
- h1 {font-family: 'brandon_grotesquebold'; font-size: 70px; line-height: 75px;}
- h2 {font-family: 'brandon_grotesquemedium'; font-size: 50px;}
- h3 {font-size: 28px; font-weight: normal; font-family: 'proxima_novaregular';}
- h4 {font-size: 24px; font-family: 'brandon_grotesquemedium';}
+ h1 {font-family: 'Poppins'; font-size: 70px; line-height: 75px;}
+ h2 {font-family: 'Poppins'; font-size: 50px;}
+ h3 {font-size: 28px; font-weight: normal; font-family: 'Poppins';}
+ h4 {font-size: 24px; font-family: 'Poppins';}
  h5 {font-size: 22px; font-weight: 500;}
- h6 {font-size: 20px; font-family: 'brandon_grotesque_regularRg'; }
+ h6 {font-size: 20px; font-family: 'Poppins'; }
  p {line-height: 32px;}
  ul {list-style-type: none;}
  a {text-decoration: none; display: inline-block;}
@@ -493,7 +502,7 @@ height: 129px;        }
  .section-spacing {padding-top: 130px;}
  .inner-page-spacing {margin-bottom: 130px;}
 .tran3s,h2 a,h3 a,h4 a,h5 a,h6 a,#theme-banner .button-group li a,.theme-banner-one .main-text-wrapper .play-buttton,#mega-menu-holder ul> li> a:before,
-#mega-menu-holder>ul> li a,.theme-main-menu .right-widget .login-button a,.our-feature-two .text .learn-more,.testimonial-section .owl-theme .owl-dots .owl-dot span,
+#mega-menu-holder>ul> li a,.theme-main-menu .right-widget .login-button a,.text .learn-more,.testimonial-section .owl-theme .owl-dots .owl-dot span,
 .subscribe-banner form button,.theme-footer .top-footer-data-wrapper .footer-list ul li a,.partner-slider .item img,.apps-overview .inner-wrapper .button-group li a,
 .contact-us-one form button,.contact-section-dark form button,.blog-grid-style .single-blog-post .date a,.blog-grid-style .single-blog-post .share-meta li a,
 .blog-grid-style .single-blog-post .share-meta li button,.theme-pagination ul li a,.theme-main-sidebar .sidebar-categories ul li a,.our-features-four .single-feature a,
@@ -501,6 +510,11 @@ height: 129px;        }
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: #fff;
+ 
+ }
+ .partner-slider .item img{
+
+  padding: 25px 0px 25px 0px;
  }
 .tran4s,.our-features-one .single-feature .icon-box img,.hover-effect-one .single-blog-post .image-box img {
   -webkit-transition: all 0.4s ease-in-out;
@@ -508,10 +522,9 @@ height: 129px;        }
  }
 /*--------------- Theme Title ------------*/
 .theme-title h2 {
-  font-family: 'Anton';
-  text-decoration: underline;
+  font-family: 'Poppins';
   text-decoration-color: #ffae00;
-  font-size: 65px;
+  font-size: 48px;
   line-height: 50px;
   font-weight: bolder;
 }
@@ -967,7 +980,7 @@ width: 8rem; height: 2.5rem;}
 }
 
 .stock-market-price #market-rate .main-wrapper .title {color: #fff; font-weight: bold; right: 20px;
-  top:60px;  font-family: 'Anton'; font-size: 1.7rem; position: absolute; Left: 20px;}
+  top:60px;  font-family: 'Maven Pro'; font-size: 1.7rem; position: absolute; Left: 20px;}
 .stock-market-price #market-rate .main-wrapper .current-info {
   position: absolute;
   right: 20px;
@@ -1025,7 +1038,7 @@ width: 8rem; height: 2.5rem;}
   background: #fff;
   z-index: 1;
 }
-.our-features-one .theme-title {text-align: center;padding-bottom: 70px;}
+.our-features-one .theme-title {text-align: center;}
 .our-features-one .single-feature .icon-box {
   width: 218px;
   height: 218px;
@@ -1049,27 +1062,13 @@ width: 8rem; height: 2.5rem;}
   background: #fff;
   position: absolute;
 }
-.our-features-one .single-feature .icon-box:before {left:-9px;top:25px;}
-.our-features-one .single-feature .icon-box:after {right:-9px;bottom:25px;}
-.our-features-one .single-feature {text-align: center;position: relative;}
-.our-features-one .single-feature h3 {padding: 44px 0 20px;}
-.our-features-one .single-feature.border-fix:before,
-.our-features-one .single-feature.border-fix:after {
-  content: '';
-  width: 120px;
-  height: 1px;
-  border-top: 1px dashed #d8e2e9;
-  position: absolute;
-  top:29%;
-}
-.our-features-one .single-feature.border-fix:before {left:-75px;}
-.our-features-one .single-feature.border-fix:after {right: -75px;}
+
 /*-------------------- Our Feature Two --------------------*/
-.our-feature-two {padding: 50px 0 70px;
-  padding-top: 60px;
+.our-feature-two {padding: 25px 0 25px;
+
 
   background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 1.5)) ,  url(../images/E9FSxNCWEAIm6L_-1.mp4-low.gif);
-  margin-top: 3%;
+
   }
 .our-feature-two .text {
   position: relative;
@@ -1109,7 +1108,7 @@ width: 8rem; height: 2.5rem;}
 }
 .our-feature-two .text .learn-more {
   width: 200px;
-  font-family: 'Anton';
+  font-family: 'Maven Pro';
   line-height: 50px;
   border-radius: 25px;
   color: #000;
@@ -1635,9 +1634,9 @@ background-image: url(images/l);}
   top:13%;
 }
 /*----------------- Partner Slider -----------*/
-.partner-section {padding: 100px 0 30px; margin-top: 10px;}
+.partner-section {margin-top: 1em;}
 .partner-slider .item a {display: block;}
-.partner-slider .item img {margin: 0 auto; margin-top: 15px;}
+.partner-slider .item img {margin: 0 auto; }
 /*------------------- Footer -----------------*/
 .theme-footer {position: relative;z-index: 1;}
 .theme-footer .shape {
@@ -1761,7 +1760,7 @@ margin-top: 5%;}
 .about-cryto.style-two .text {color: #fff;}
 .about-cryto.style-two .learn-more {
   width: 200px;
-  font-family: 'Anton';
+  font-family: 'Maven Pro';
   line-height: 50px;
   border-radius: 25px;
   color: #000;
@@ -1772,7 +1771,7 @@ margin-top: 5%;}
 }
 .roadmap button{
   width: 200px;
-  font-family: 'Anton';
+  font-family: 'Maven Pro';
   line-height: 50px;
   border-radius: 25px;
   color: #000;
@@ -2310,7 +2309,7 @@ margin-top: 5%;}
 }
 .our-feature-five .text .learn-more {
   width: 200px;
-  font-family: 'Anton';
+  font-family: 'Maven Pro';
   line-height: 50px;
   border-radius: 25px;
   color: #000;
@@ -3070,3 +3069,12 @@ box-shadow: none;
   display: block;
 }
 					
+
+
+
+
+
+
+
+
+

@@ -59,7 +59,11 @@
 						<div class="container">
 							<div class="menu-wrapper clearfix">
 								<div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/hoge_defi.jpg' %}" alt="Logo" height="50" width="120"></a></div>
-							
+							<style>
+								.navbar .nav-item{
+									padding-right: 48px;
+								}
+							</style>
 
 								<!-- Navigation -->
 							    <nav class="navbar navbar-expand-lg dark-bg" id="mega-menu-holder"id="Home">
@@ -68,11 +72,11 @@
 							    		  <i class="fa fa-bars" aria-hidden="true"></i>
 							    		</button>
 							    		<div class="collapse navbar-collapse" id="navbarResponsive">
-							    		  <ul class="navbar-nav"style="font-weight: bold;">
+							    		  <ul class="navbar-nav"style="font-weight: bold;" >
                                             <li class="nav-item"  >
 							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
 							    		  	</li>
-							    		  	<li class="nav-item mydropdown"   >
+							    		  	<li class="nav-item mydropdown">
 												
 												<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">About
 												<i class="fa fa-caret-down"></i>
@@ -86,22 +90,30 @@
 													
 							    		  	 
 							    		  	</li>
+											  <li class="nav-item mydropdown">
+												
+												<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">NFT Collections
+												<i class="fa fa-caret-down"></i>
+												</button>
+												<div class="mydropdown-content">
+													<a class="nav-link js-scroll-trigger" href="#media">Media</a><hr>
+												<a class="nav-link js-scroll-trigger" href="{% url 'store' %}"> Merchandise Store</a>
+											 
+												</div>
+												
+													
+							    		  	 
+							    		  	</li>
 											
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#services">Marketplace/NFTs</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#progress">How To</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Merchandise Store</a>
-							    		  	</li>
-							    		  	<li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
-							    		  	</li>
+							    		
 											  <li class="nav-item">
-							    		  	  <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-							    		  	</li>
+												<a class="nav-link js-scroll-trigger" href="#progress">Buy</a>
+											  </li>
+											 
+											
+											  <li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+											  </li>
 							    		  </ul>
 							    		</div>
 							    	</div>
@@ -250,15 +262,16 @@
 					Our Feature
 				=====================================================
 				-->
-				
+				<div class="theme-title text-center">
+					<h2><span>Ecosystem Overview</span></h2>
+				</div>	
+						
 
 
 
 				<div class="our-feature-two" id="services">
 					<div class="container">
-						<div class="theme-title text-center">
-							<h2><span>Ecosystem Overview</span></h2>
-						</div>
+
 						<div class="row single-block">
 							<div class="col-lg-6">
 								<div class="text">
@@ -521,9 +534,9 @@
 
 								<div class="text-center container" style="justify-self: center; margin: auto;">
 									<button id="b39" class="learn-more  " >BUY HOGE <i class="flaticon-right-thin"></i></button>
-									<p class="text-center"><a href="https://www.youtube.com/watch?v=DROY0E3so_Q" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Multichain</a></p>
+									<!-- <p class="text-center"><a href="https://www.youtube.com/watch?v=DROY0E3so_Q" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Multichain</a></p>
 									<p class="text-center"><a href="https://www.youtube.com/watch?v=FJzBdpvo5cg" class="learn-more ">How To Video <i class="flaticon-right-thin"></i>Pancakeswap</a></p>
-								
+								 -->
 	
 							
 							</div>
@@ -682,9 +695,9 @@
                 <div class="item">
                  										
 					<a class="lightbo">
-									  <iframe width="360px" height="227px"allowfullscreen="true"
+									  <!-- <iframe width="360px" height="227px"allowfullscreen="true"
 				src="https://www.youtube.com/embed/FJzBdpvo5cg">
-				
+				 -->
 				</iframe>	</a>
 				   
 				</div> 

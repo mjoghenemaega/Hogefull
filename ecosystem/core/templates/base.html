@@ -26,6 +26,8 @@
 		<!-- Main style sheet -->
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 		<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+		<link href="{% static 'css/glightbox.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/swiper-bundle.min.css' %}"rel="stylesheet">
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		
@@ -61,51 +63,60 @@
 							
 
 								<!-- Navigation -->
-							    <nav class="navbar navbar-expand-lg dark-bg" id="mega-menu-holder"id="Home">
+								<nav class="navbar navbar-expand-lg dark-bg" id="mega-menu-holder"id="Home">
 							    	<div class="container">
 							    		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 							    		  <i class="fa fa-bars" aria-hidden="true"></i>
 							    		</button>
 							    		<div class="collapse navbar-collapse" id="navbarResponsive">
-											<ul class="navbar-nav"style="font-weight: bold;">
-											 <li class="nav-item"  >
-												  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
-												</li>
-												<li class="nav-item mydropdown"   >
+							    		  <ul class="navbar-nav"style="font-weight: bold;" >
+                                            <li class="nav-item"  >
+							    		  	  <a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home</a>
+							    		  	</li>
+							    		  	<li class="nav-item mydropdown">
 												
-													<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">About
-													<i class="fa fa-caret-down"></i>
-													</button>
-													<div class="mydropdown-content">
-													<a  class="nav-link" href="{% url 'about' %}">About us</a>
-													<hr>
-													<a target="_blank" href="https://www.certik.com/projects/hogefinance">Certik Audit</a>
+												<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">About
+												<i class="fa fa-caret-down"></i>
+												</button>
+												<div class="mydropdown-content">
+												<a  class="nav-link" href="{% url 'about' %}">About us</a><hr>
+												<a target="_blank" href="https://www.certik.com/projects/hogefinance">Certik Audit</a>
+												
+												</div>
+												
 													
-													</div>
+							    		  	 
+							    		  	</li>
+											  <li class="nav-item mydropdown">
+												
+												<button class="dropbtn nav-link js-scroll-trigger" style="font-weight: bold;">NFT Collections
+												<i class="fa fa-caret-down"></i>
+												</button>
+												<div class="mydropdown-content">
+													<a class="nav-link js-scroll-trigger" href="{% url 'store' %}"> Merchandise Store</a>
+											 
+													<a class="nav-link js-scroll-trigger" href="#media">Media</a><hr>
+												
+												</div>
+												
 													
-														
-												   
-												  </li>
-												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#services">NFT's</a>
-												</li>
-												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#progress">Buy</a>
-												</li>
-												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="{% url 'store' %}">Store</a>
-												</li>
-												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#media">Media</a>
-												</li>
-												<li class="nav-item">
-												  <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-												</li>
-											</ul>
-										  </div>
+							    		  	 
+							    		  	</li>
+											
+							    		
+											  <li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#progress">Buy</a>
+											  </li>
+											 
+											
+											  <li class="nav-item">
+												<a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+											  </li>
+							    		  </ul>
+							    		</div>
 							    	</div>
 									
-							    </nav> 
+							    </nav>  
 							</div> <!-- /.menu-wrapper -->
 						</div> <!-- /.container -->
 					
@@ -266,22 +277,28 @@
 
 
 
-  <script type="text/javascript" src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
-
-  <script type="text/javascript" src="{% static 'vendor/popper.js/popper.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-  <script type="text/javascript" src="{% static 'vendor/aos-next/dist/aos.js' %}"></script>
-  <script type="text/javascript" src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
-
-  <script type="text/javascript" src="{% static 'vendor/jquery.countTo.js' %}"></script>
-
-  <script type="text/javascript" src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
-
-  <script type="text/javascript" src="{% static 'vendor/jquery.appear.js' %}"></script>
- 
-  <script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+  
+		<script type="text/javascript" src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
+    
+		<script type="text/javascript" src="{% static 'vendor/popper.js/popper.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  
+		<script type="text/javascript" src="{% static 'vendor/aos-next/dist/aos.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+  
+		<script type="text/javascript" src="{% static 'vendor/jquery.countTo.js' %}"></script>
+  
+		<script type="text/javascript" src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+  
+		<script type="text/javascript" src="{% static 'vendor/jquery.appear.js' %}"></script>
+	   
+		<script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+	   
+		<script type="text/javascript" src="{% static 'js/swiper-bundle.min.js' %}"></script>
+		
+		<script type="text/javascript" src="{% static 'js/glightbox.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
  
 	<script>
 		function copyToClipboard(element) {
@@ -293,28 +310,110 @@ $temp.remove();
 }
 
 	</script>
+	<script>
+		/**
+		* Template Name: Personal - v4.6.0
+		* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+		* Author: BootstrapMade.com
+		* License: https://bootstrapmade.com/license/
+		*/
+		(function() {
+		  "use strict";
+		
+		  /**
+		   * Easy selector helper function
+		   */
+		  const select = (el, all = false) => {
+			el = el.trim()
+			if (all) {
+			  return [...document.querySelectorAll(el)]
+			} else {
+			  return document.querySelector(el)
+			}
+		  }
+		
+		  /**
+		   * Easy event listener function
+		   */
+		  const on = (type, el, listener, all = false) => {
+			let selectEl = select(el, all)
+		
+			if (selectEl) {
+			  if (all) {
+				selectEl.forEach(e => e.addEventListener(type, listener))
+			  } else {
+				selectEl.addEventListener(type, listener)
+			  }
+			}
+		  }
+		
 	
+		  /**
+		   * Porfolio isotope and filter
+		   */
+		  window.addEventListener('load', () => {
+			let portfolioContainer = select('.portfolio-container');
+			if (portfolioContainer) {
+			  let portfolioIsotope = new Isotope(portfolioContainer, {
+				itemSelector: '.portfolio-item',
+				layoutMode: 'fitRows'
+			  });
+		
+			  let portfolioFilters = select('#portfolio-flters li', true);
+		
+			  on('click', '#portfolio-flters li', function(e) {
+				e.preventDefault();
+				portfolioFilters.forEach(function(el) {
+				  el.classList.remove('filter-active');
+				});
+				this.classList.add('filter-active');
+		
+				portfolioIsotope.arrange({
+				  filter: this.getAttribute('data-filter')
+				});
+			  }, true);
+			}
+		
+		  });
+		
+		  /**
+		   * Initiate portfolio lightbox 
+		   */
+		  const portfolioLightbox = GLightbox({
+			selector: '.portfolio-lightbox'
+		  });
+		
+		  /**
+		   * Initiate portfolio details lightbox 
+		   */
+		  const portfolioDetailsLightbox = GLightbox({
+			selector: '.portfolio-details-lightbox',
+			width: '90%',
+			height: '90vh'
+		  });
+		
+		  /**
+		   * Portfolio details slider
+		   */
+		  new Swiper('.portfolio-details-slider', {
+			speed: 400,
+			loop: true,
+			autoplay: {
+			  delay: 5000,
+			  disableOnInteraction: false
+			},
+			pagination: {
+			  el: '.swiper-pagination',
+			  type: 'bullets',
+			  clickable: true
+			}
+		  });
+		
+		})()
+		
+		
+			</script>		
 <script>
-var amount = 800;
-var sky = $('.sky');
-
-for (var i = 0 ; i < amount ; i++ ) {
-var s = $('<div class="star-blink"><div></div></div>');
-s.css({
-	'top': Math.random() * 100 + '%',
-	'left': Math.random() * 100 + '%',
-	'animation': 'blinkAfter 15s infinite ' + Math.random() * 100 + 's ease-out',
-	'width': Math.random() * 2 + 7 + 'px',
-	'height': Math.random() * 2 + 7 + 'px',
-	'opacity': Math.random() * 5 / 10 + 0.5
-	});
-if (i % 8 === 0) {
-	s.addClass('red');
-} else if (i % 10 === 6) {
-	s.addClass('blue');
-}
-sky.append(s);
-}
 
 
 

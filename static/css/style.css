@@ -1108,14 +1108,14 @@ width: 8rem; height: 2.5rem;}
 }
 .our-feature-two .text .learn-more {
   width: 200px;
-  font-family: 'Maven Pro';
+  font-family: 'Poppins';
   line-height: 50px;
   border-radius: 25px;
-  color: #000;
+  color: #fff;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 28px;
-  background:linear-gradient( 45deg, #ffae00, #ffae00 100%);
+  background: #ffffff1a;
 }
 .our-feature-two .text .learn-more i {vertical-align: middle;font-size: 25px;margin-left: 12px;}
 .our-feature-two .text p {padding: 30px 0;}
@@ -1249,11 +1249,10 @@ width: 8rem; height: 2.5rem;}
 }
 /*----------------------- Theme Counter ------------------*/
 .theme-counter .bg-image {
-  background: #000;
-  padding: 30px 0 120px;
-  border-radius: 22px;
-  margin-top: 22px;
-  border-top: 22px solid #ffae00;
+  
+
+  
+  
 }
 .theme-counter .bg-image  img {
 border: 7px solid #ffae00;
@@ -1293,7 +1292,7 @@ text-align: center;
   font-weight: 900;
 }
 .theme-counter .bg-image .counter-wrapper {
-  padding: 55px 100px 0;
+  padding: 0px 100px 0;
   text-align: center;
   
   
@@ -1304,14 +1303,14 @@ text-align: center;
   
 }
 .theme-counter .bg-image .counter-wrapper .number {
-  font-family: 'brandon_grotesquelight';
-  font-size: 27px;
+  font-family: "Poppins";
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
 }
 .theme-counter .bg-image .counter-wrapper .number .timer {font-size: 22px;}
 .theme-counter .bg-image .counter-wrapper p {
-  font-family: 'brandon_grotesque_regularRg';
+  font-family: 'Poppins';
   font-size: 24px;
   color: #fff;
 
@@ -1329,16 +1328,16 @@ text-align: center;
   padding: 95px 0 55px;
 }
 .our-work-progress .main-wrapper .learn-more {
- 
-  font-family: 'brandon_grotesquemedium';
-  background-color: #ffae00;
-  border-radius: 20px;
-  padding: 9px;
-
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 16px 10px 16px;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
 
 }
 .our-work-progress .main-wrapper .learn-more:hover {
@@ -1545,6 +1544,13 @@ background-image: url(images/l);}
   background-attachment: fixed;
   margin-top: 125px;
   
+}
+#buytoken{
+						
+  background: url(../images/E9FSxNCWEAIm6L_-1.mp4-low.gif) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 125px;
 }
 .contact-us-one.m0 {margin: 0;}
 .contact-us-one .overlay {
@@ -1770,16 +1776,17 @@ margin-top: 5%;}
   background:linear-gradient( 45deg, #ffae00, #ffae00 100%);
 }
 .roadmap button{
-  width: 200px;
-  font-family: 'Maven Pro';
-  line-height: 50px;
-  border-radius: 25px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 16px 10px 16px;
+  font-size: 19px;
+  text-transform: uppercase;
   color: #000;
-  text-align: center;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 28px;
-  background:linear-gradient( 45deg, #ffae00, #ffae00 100%);
+  font-family: "Poppins";
+  background: #ffae00;
+  margin: 10px 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
 }
 .about-cryto.style-two .icon-data {position: relative;height: 100%;
 }
@@ -2792,26 +2799,72 @@ font-size: 1rem;
   transition:all 0.8s ease-in-out;
 }
 .fb{
-  background-color:#3C5A98;
+  background-color:#ffffff1a;
 }
 .twitter{
-    background-color:#1EA1F2;
+    background-color:#ffffff1a;
 }
 .insta{
-    background-color:#DC4F42;
+    background-color:#ffffff1a;
 }
 .pin{
-    background-color:#CB2128;
+    background-color:#ffffff1a;
 }
 .vim{
-    background-color:#59BFBE;
+    background-color:#ffffff1a;
 }
 .open{
-  background-color: rgb(143, 240, 143);
+  background-color: #ffffff1a;
 }
 
 
+.tokenomics .row{
+  border-radius: 1px;
+  
+  border: 2px solid rgba(255, 255, 255, 0.877);
+  
+  
+  height: 6rem;
+}
+.tokenomics .row .col{
+  
+  
+  border-right: 2px solid rgba(255, 255, 255, 0.877);
 
+}
+.tokenomics .row .end{
+  
+  
+  border-left: 2px solid rgba(255, 255, 255, 0.877);
+
+}
+.tokenomics .token{
+  
+  height: 4rem;
+  
+}
+.tokenomics .power{
+  
+  height: 2rem;
+  
+}
+.kabosu-content .row .col-sm-3 a{
+  cursor: pointer;
+display: inline-block;
+padding: 4px 14px 9px 14px;
+font-size: 19px;
+text-transform: uppercase;
+color: #fff;
+font-family: "Poppins";
+background: #ffffff1a;
+margin: 10px 3px 10px 3px;
+transition: all 0.3s ease-in-out;
+border-radius: 4px
+}
+.navbar .nav-item{
+  padding-right: 25px;
+  font-family: "Poppins";
+}
 
 
 
@@ -2909,6 +2962,7 @@ height: 45px;
 padding-left: 25px;
 padding-right: 25px;
 width: 60%;
+margin: auto;
 
 }
 .clear-2 {
@@ -3078,3 +3132,266 @@ box-shadow: none;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  background: #ffae00;
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #63eda3;
+}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+.portfolio-details .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+}
+.portfolio-details .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #18d26e;
+}
